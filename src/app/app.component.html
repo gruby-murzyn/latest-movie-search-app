@@ -1,20 +1,104 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
 
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Moves On Demand</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li> <a [routerLink]="['/']">Home</a></li>
+                <li> <a [routerLink]="['/About']">About Us</a></li>
+            </ul>
+            <form class="navbar-form navbar-right">
+              <div class="form-group">
+                <input type="text" placeholder="Email" class="form-control">
+              </div>
+              <div class="form-group">
+                <input type="password" placeholder="Password" class="form-control">
+              </div>
+              <button type="submit" routerLink="/login" routerLinkActive="active" class="btn btn-success">Sign in</button>
+              
+            </form>
+          </div><!--/.navbar-collapse -->
+        </div>
+      </nav>
+      <div class="tabs tabs-style-fillup">
+        <nav>
+          <ul>
+            <li class="tab-current"><a href="#section-fillup-1" class="icon icon-home"><span>Home</span></a></li>
+            <li class=""><a href="#section-fillup-2" class="icon icon-gift"><span>Deals</span></a></li>
+            <li class=""><a href="#section-fillup-3" class="icon icon-upload"><span>Upload</span></a></li>
+            <li class=""><a href="#section-fillup-4" class="icon icon-coffee"><span>Work</span></a></li>
+            <li><a href="#section-fillup-5" class="icon icon-config"><span>Settings</span></a></li>
+          </ul>
+        </nav>
+        <div class="content-wrap">
+          <section id="section-fillup-1" class="content-current"><p>1</p></section>
+          <section id="section-fillup-2" class=""><p>2</p></section>
+          <section id="section-fillup-3" class=""><p>3</p></section>
+          <section id="section-fillup-4" class=""><p>4</p></section>
+          <section id="section-fillup-5"><p>5</p></section>
+        </div><!-- /content -->
+      </div>
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="container">
+  <div class="row">
+<div class="col-lg-3">
+  <div class="Move-Container">
+        <div class="Move-Card">
+              <div class="Move">
+                 <img src="http://image.tmdb.org/t/p/w500//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg">
+                </div>
+        <div class="Move back">
+          <button type="submit" class="btn btn-primary">More Details</button>
+        </div>
+     </div>
+     </div>
+     </div>
+
+     <div class="col-lg-3">
+     <div class="Move-Container">
+        <div class="Move-Card">
+              <div class="Move">
+                  <img src="http://image.tmdb.org/t/p/w500//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg">
+                </div>
+        <div class="Move back">
+          <button type="submit" class="btn btn-primary">More Details</button>
+        </div>
+     </div>
+</div>
+</div>
+
+<div class="col-lg-3">
+     <div class="Move-Container">
+        <div class="Move-Card">
+              <div class="Move">
+                  <img src="http://image.tmdb.org/t/p/w500//jjPJ4s3DWZZvI4vw8Xfi4Vqa1Q8.jpg">
+                </div>
+        <div class="Move back">
+            <button mat-button>Click me!</button>
+        </div>
+     </div>
+     </div>
+     </div>
+</div>
+
+
+
+
+<div class="container">
+    <router-outlet></router-outlet> 
+ 
+  
+  <hr>
+
+  <footer>
+    <p>&copy; 2018 Designed and created by Geofrey Zellah , Zellah's Inc .</p>
+  </footer>
+</div> <!-- /container -->

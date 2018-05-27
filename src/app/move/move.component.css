@@ -1,0 +1,15 @@
+.list-group
+{
+    padding-left:53px;
+}
+
+.zero{
+    margin-left: 55px;
+    margin-top: -61px;
+
+}
+
+.list-group-item {
+    color: white;
+    background-color: #0a1517;
+}
